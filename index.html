@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cheat Checker — Minecraft</title>
+    <meta name="theme-color" content="#07070c">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@500;700;900&family=Manrope:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="progress" id="progress" aria-hidden="true"></div>
+    <div class="cursor-glow" id="cursorGlow" aria-hidden="true"></div>
+    <canvas id="particles" aria-hidden="true"></canvas>
+    <div class="noise" aria-hidden="true"></div>
+
+    <!-- ================= NAV ================= -->
+    <header class="nav" id="nav">
+        <div class="container nav-inner">
+            <a href="#top" class="logo" aria-label="Cheat Checker — на главную">
+                <span class="logo-ico">⚡</span>
+                <span>CHEAT<em>CHECKER</em></span>
+            </a>
+            <nav class="nav-links" id="navLinks" aria-label="Основная навигация">
+                <a href="#advantages">Преимущества</a>
+                <a href="#programs">Программы</a>
+                <a href="#checker">Чекер</a>
+                <a href="#checker" class="btn btn-sm btn-primary">Скачать</a>
+            </nav>
+            <button class="burger" id="burger" aria-label="Открыть меню" aria-expanded="false"><span></span><span></span><span></span></button>
+        </div>
+    </header>
+
+    <main id="top">
+
+        <!-- ================= HERO ================= -->
+        <section class="hero">
+            <div class="hero-glow hero-glow-1" aria-hidden="true"></div>
+            <div class="hero-glow hero-glow-2" aria-hidden="true"></div>
+            <div class="scanline" aria-hidden="true"></div>
+
+            <div class="container hero-inner">
+                <div class="hero-copy">
+                    <div class="badge reveal">
+                        <span class="badge-dot"></span>
+                        Minecraft &nbsp;·&nbsp; Windows 10/11 &nbsp;·&nbsp; Бесплатно
+                    </div>
+                    <h1 class="reveal d1">Читы <span class="grad glitch" data-text="не спрячутся">не&nbsp;спрячутся</span>.<br>Вообще никак.</h1>
+                    <p class="lead reveal d2">
+                        Автоматическая проверка ПК на запрещённое ПО для Minecraft
+                        и полный набор утилит для проверяющих. Находит следы
+                        <b>даже удалённых читов</b>.
+                    </p>
+                    <div class="cta reveal d3">
+                        <a href="#checker" class="btn btn-primary btn-lg magnetic">
+                            <span class="btn-ico">⬇️</span>
+                            Скачать чекер
+                        </a>
+                        <a href="#programs" class="btn btn-ghost btn-lg">
+                            <span class="btn-ico">📂</span>
+                            Программы
+                        </a>
+                    </div>
+                    <div class="hero-meta reveal d4">
+                        <span>Без установки</span><i></i><span>~15 МБ</span><i></i><span>Быстрая проверка</span>
+                    </div>
+                </div>
+
+                <div class="hero-term reveal rr d2">
+                    <div class="term tilt">
+                        <div class="term-bar">
+                            <span class="td td-r"></span><span class="td td-y"></span><span class="td td-g"></span>
+                            <span class="term-title">minecraft-checker.exe — полный скан</span>
+                        </div>
+                        <div class="term-body">
+                            <div class="t-line t-dim">── СКАНИРОВАНИЕ ДИСКА ─────────────</div>
+                            <div class="t-line t-cmd">checker --scan --full</div>
+                            <div class="t-line t-ok">MFT проиндексирован · 2.1 с</div>
+                            <div class="t-line t-warn">найден след &nbsp;nursultan.jar (удалён)</div>
+                            <div class="t-line t-warn">след инжекта &nbsp;javaw.exe ← JNI</div>
+                            <div class="t-line t-err">ВЕРДИКТ: ЧИТ-КЛИЕНТ ОБНАРУЖЕН</div>
+                            <div class="t-line t-cmd">checker --report<span class="t-caret"></span></div>
+                        </div>
+                    </div>
+                    <div class="term-shadow" aria-hidden="true"></div>
+                </div>
+            </div>
+
+            <a href="#advantages" class="scroll-hint" aria-label="Листай вниз"><span></span></a>
+        </section>
+
+        <!-- ================= TICKER ================= -->
+        <div class="ticker" aria-hidden="true">
+            <div class="ticker-track">
+                <div class="ticker-group">
+                    <b>ДЕТЕКТИТ:</b><span>Nursultan</span><span>Celestial</span><span>Expensive</span><span>Wexside</span><span>Дикий клиент</span><span>DeadCode</span><span>Akrien</span><span>Delta</span><span>NightWare</span><span>Baritone</span><span>Meteor</span><span>Sigma</span><span>RusherHack</span><span>Impact</span><span>приватные сборки</span><span>DLL-инжекты</span><span>чистилки</span>
+                </div>
+                <div class="ticker-group">
+                    <b>ДЕТЕКТИТ:</b><span>Nursultan</span><span>Celestial</span><span>Expensive</span><span>Wexside</span><span>Дикий клиент</span><span>DeadCode</span><span>Akrien</span><span>Delta</span><span>NightWare</span><span>Baritone</span><span>Meteor</span><span>Sigma</span><span>RusherHack</span><span>Impact</span><span>приватные сборки</span><span>DLL-инжекты</span><span>чистилки</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- ================= ADVANTAGES ================= -->
+        <section class="section" id="advantages">
+            <div class="container">
+                <div class="section-head reveal">
+                    <div class="eyebrow">// Преимущества</div>
+                    <h2>Почему <span class="grad">мы</span></h2>
+                </div>
+                <div class="grid grid-4">
+                    <article class="card tilt reveal">
+                        <div class="card-ico">🛡️</div>
+                        <h3>Тщательная проверка</h3>
+                        <p>Автоматический скан ПК на скрытые читы, трейсы запуска и следы удаления файлов.</p>
+                    </article>
+                    <article class="card tilt reveal d1">
+                        <div class="card-ico">⚡</div>
+                        <h3>Быстро</h3>
+                        <p>Проверка занимает считанные минуты — не нужно ничего устанавливать вручную.</p>
+                    </article>
+                    <article class="card tilt reveal d2">
+                        <div class="card-ico">🔒</div>
+                        <h3>Безопасно</h3>
+                        <p>Удалённый доступ выдаёте вы и можете отключить его в любой момент.</p>
+                    </article>
+                    <article class="card tilt reveal d3">
+                        <div class="card-ico">🎯</div>
+                        <h3>Точный результат</h3>
+                        <p>База из сотен сигнатур читов, клиентов и размеров файлов .jar.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- ================= PROGRAMS ================= -->
+        <section class="section section-alt" id="programs">
+            <div class="container">
+                <div class="section-head reveal">
+                    <div class="eyebrow">// Инструменты</div>
+                    <h2>Программы для <span class="grad">проверки</span></h2>
+                    <p class="section-sub">Полный набор утилит, которыми работает любой проверяющий. Всё в одном месте.</p>
+                </div>
+
+                <div class="grid grid-3" id="programsGrid">
+
+                    <article class="card tilt reveal">
+                        <div class="card-ico">🔍</div>
+                        <h3>Ocean++</h3>
+                        <p>Программа, которая автоматически проверяет Ваш ПК на наличие или использование запрещенного ПО</p>
+                        <a href="#" class="btn-download" data-program="ocean">Скачать</a>
+                    </article>
+
+                    <article class="card tilt reveal d1">
+                        <div class="card-ico">🖥️</div>
+                        <h3>AnyDesk</h3>
+                        <p>Приложение для удалённого рабочего стола. Позволяет другому человеку управлять вашим ПК. Можно отключить в любой момент</p>
+                        <a href="#" class="btn-download" data-program="anydesk">Скачать</a>
+                    </article>
+
+                    <article class="card tilt reveal d2">
+                        <div class="card-ico">🖥️</div>
+                        <h3>RustDesk (Основная)</h3>
+                        <p>Приложение для удалённого рабочего стола. Позволяет другому человеку управлять вашим ПК. Можно отключить в любой момент</p>
+                        <a href="#" class="btn-download" data-program="rustdesk-main">Скачать</a>
+                    </article>
+
+                    <article class="card tilt reveal">
+                        <div class="card-ico">🖥️</div>
+                        <h3>RustDesk (Альтернативная)</h3>
+                        <p>Приложение для удалённого рабочего стола. Позволяет другому человеку управлять вашим ПК. Можно отключить в любой момент</p>
+                        <a href="#" class="btn-download" data-program="rustdesk-alt">Скачать</a>
+                    </article>
+
+                    <article class="card tilt reveal d1">
+                        <div class="card-ico">📁</div>
+                        <h3>Everything</h3>
+                        <p>Программа для мгновенного поиска по папкам, названиям или весу файлов</p>
+                        <a href="#" class="btn-download" data-program="everything">Скачать</a>
+                    </article>
+
+                    <article class="card tilt reveal d2">
+                        <div class="card-ico">📜</div>
+                        <h3>JournalTrace</h3>
+                        <p>Программа для отслеживания действий, которые пользователь совершал с файлами и папками</p>
+                        <a href="#" class="btn-download" data-program="journaltrace">Скачать</a>
+                    </article>
+
+                    <article class="card tilt reveal">
+                        <div class="card-ico">🗂️</div>
+                        <h3>ShellBags Analyzer &amp; Cleaner</h3>
+                        <p>Программа для узнавания, какие папки посещались, удалялись и прочее</p>
+                        <a href="#" class="btn-download" data-program="shellbags">Скачать</a>
+                    </article>
+
+                    <article class="card tilt reveal d1">
+                        <div class="card-ico">⚙️</div>
+                        <h3>Process Hacker 2</h3>
+                        <p>Программа для доступа к памяти устройства и свойствам процессов. Помогает искать спрятанные читы</p>
+                        <a href="#" class="btn-download" data-program="processhacker">Скачать</a>
+                    </article>
+
+                    <article class="card tilt reveal d2">
+                        <div class="card-ico">⚙️</div>
+                        <h3>SystemInformer</h3>
+                        <p>Программа для доступа к памяти устройства и свойствам процессов. Помогает искать спрятанные читы</p>
+                        <a href="#" class="btn-download" data-program="systeminformer">Скачать</a>
+                    </article>
+
+                    <article class="card tilt reveal">
+                        <div class="card-ico">🔌</div>
+                        <h3>USB-DriveLog</h3>
+                        <p>Программа для отслеживания присоединения/отключения внешних носителей (USB Флешек)</p>
+                        <a href="#" class="btn-download" data-program="usbdrivelog">Скачать</a>
+                    </article>
+
+                    <article class="card tilt reveal d1">
+                        <div class="card-ico">🔌</div>
+                        <h3>USB-Deview</h3>
+                        <p>Программа для отслеживания присоединения/отключения внешних устройств (USB устройств)</p>
+                        <a href="#" class="btn-download" data-program="usbdeview">Скачать</a>
+                    </article>
+
+                    <article class="card tilt reveal d2">
+                        <div class="card-ico">📊</div>
+                        <h3>ExecutedProgramsList</h3>
+                        <p>Программа для поиска и анализа ранее запускавшихся приложений или программ</p>
+                        <a href="#" class="btn-download" data-program="executedprogramslist">Скачать</a>
+                    </article>
+
+                    <article class="card tilt reveal">
+                        <div class="card-ico">📈</div>
+                        <h3>WinPrefetchView</h3>
+                        <p>Программа для подробного анализа папки Prefetch. Находит ранее запускавшиеся .exe приложения</p>
+                        <a href="#" class="btn-download" data-program="winprefetchview">Скачать</a>
+                    </article>
+
+                    <article class="card tilt reveal d1">
+                        <div class="card-ico">🕐</div>
+                        <h3>LastActivityView</h3>
+                        <p>Программа для анализа активности ПК, чтобы найти запускавшиеся .exe-читы</p>
+                        <a href="#" class="btn-download" data-program="lastactivityview">Скачать</a>
+                    </article>
+
+                    <article class="card tilt reveal d2">
+                        <div class="card-ico">📂</div>
+                        <h3>OpenSaveFilesView</h3>
+                        <p>Программа для поиска в памяти системы информации о запускавшихся файлах</p>
+                        <a href="#" class="btn-download" data-program="opensavefilesview">Скачать</a>
+                    </article>
+
+                    <article class="card tilt reveal">
+                        <div class="card-ico">🎮</div>
+                        <h3>FunModAnalyzer</h3>
+                        <p>Программа, анализирующая модификации загруженные в игру</p>
+                        <a href="#" class="btn-download" data-program="funmodanalyzer">Скачать</a>
+                    </article>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- ================= CHECKER ================= -->
+        <section class="section dl" id="checker">
+            <div class="dl-glow" aria-hidden="true"></div>
+            <div class="radar" aria-hidden="true">
+                <div class="radar-ring r1"></div>
+                <div class="radar-ring r2"></div>
+                <div class="radar-ring r3"></div>
+                <div class="radar-beam"></div>
+                <i class="radar-dot rd1"></i><i class="radar-dot rd2"></i><i class="radar-dot rd3"></i>
+            </div>
+
+            <div class="container container-narrow dl-inner reveal">
+                <div class="eyebrow">// Чекер</div>
+                <div class="checker-ico">⚡</div>
+                <h2>MINECRAFT CHEAT <span class="grad">CHECKER</span></h2>
+                <p class="lead">Автоматическая проверка ПК на наличие запрещенного ПО для Minecraft</p>
+
+                <div class="badge"><span class="badge-dot"></span> Доступен для скачивания</div>
+
+                <div class="cta">
+                    <a href="download.php"
+                       class="btn btn-primary btn-xl pulse magnetic"
+                       id="download-checker"
+                       download="funtime-chk.bat">
+                        <span class="btn-ico">⬇️</span>
+                        Скачать чекер
+                    </a>
+                    <button class="btn btn-ghost btn-xl" id="install-powershell" onclick="copyPowerShellCommand()">
+                        <span class="btn-ico">💻</span>
+                        Установить через PowerShell
+                    </button>
+                </div>
+
+                <p class="dl-note" id="ps-note" style="display:none;"><b>Команда скопирована!</b> Вставьте в PowerShell (от администратора)</p>
+                <div class="dl-meta">Windows 10/11 &nbsp;·&nbsp; .bat &nbsp;·&nbsp; Быстрая проверка</div>
+
+                <div class="text-copy-section">
+                    <div class="section-head">
+                        <div class="eyebrow">// Тексты для поиска</div>
+                        <h3 class="tc-title">Готовые поисковые запросы</h3>
+                    </div>
+
+                    <div class="text-card tilt reveal">
+                        <h4>Текст 1 <span class="t-tag">Size + .jar</span></h4>
+                        <p>Копируй этот текст и вставь в поисковую строку Windows для поиска файлов по размеру и расширению</p>
+                        <button class="btn-copy" onclick="copyTextSize1()"><span>📋</span> Скопировать</button>
+                        <p class="copy-note" id="size-note-1" style="display:none;"><b>Скопировано!</b></p>
+                    </div>
+
+                    <div class="text-card tilt reveal d1">
+                        <h4>Текст 2 <span class="t-tag">Size + клиенты</span></h4>
+                        <p>Длинный список размеров и названий клиентов</p>
+                        <button class="btn-copy" onclick="copyTextSize2()"><span>📋</span> Скопировать</button>
+                        <p class="copy-note" id="size-note-2" style="display:none;"><b>Скопировано!</b></p>
+                    </div>
+
+                    <div class="text-card tilt reveal d2">
+                        <h4>Текст 3 <span class="t-tag">Клиенты</span></h4>
+                        <p>Список названий Minecraft клиентов и читов</p>
+                        <button class="btn-copy" onclick="copyTextClients()"><span>📋</span> Скопировать</button>
+                        <p class="copy-note" id="client-note" style="display:none;"><b>Скопировано!</b></p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- ================= FOOTER ================= -->
+    <footer class="footer">
+        <div class="container footer-bottom">
+            <p>© <span id="year"></span> Cheat Checker. Все права защищены.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
