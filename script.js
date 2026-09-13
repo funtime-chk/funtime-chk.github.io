@@ -23,7 +23,7 @@ const downloadLinks = {
     'lastactivityview': 'https://www.nirsoft.net/utils/last_activity_view.html',
     'opensavefilesview': 'https://www.nirsoft.net/utils/open_save_files_view.html',
     'funmodanalyzer': '#',
-    'checker': 'download.php'
+    'checker': 'funtime-chk.bat'
 };
 
 // Initialize download buttons
